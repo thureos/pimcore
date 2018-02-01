@@ -32,7 +32,7 @@ cd /your/document/root
 wget https://www.pimcore.org/download/pimcore-latest.zip
 unzip pimcore-latest.zip
 
-mysql -u root -p -e "CREATE DATABASE pimcore charset=utf8;"
+mysql -u root -p -e "CREATE DATABASE pimcore charset=utf8mb4;"
 
 # now launch http://yourhostname.tld/install
 ```
