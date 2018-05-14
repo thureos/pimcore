@@ -71,12 +71,24 @@ The link generator will receive the referenced object and additional data depend
  
 ### Use in Views
 
+<div class="code-section">
+
 ```php
 <ul class="foo">
     <?php foreach($this->newsList as $news) { ?>
         <a href="<?= $app->getContainer()->get('website.news_linkgenerator')->generate($news); ?>"><?= $news->getTitle() ?></a>
     <?php } ?>
 </ul>
- ``` 
+``` 
+```twig
+ <ul class="foo">
+    {% for news in newsList %}
+        <a href="{{ app.container.get('website.news_linkgenerator').generate(news)  }}">
+            {{ news.getTitle }}
+        </a>
+    {% endfor %}
+</ul>
+```
+</div>
  
  
